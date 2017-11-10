@@ -1,0 +1,14 @@
+{
+  "name": "audiopage",
+  "version": "1.0.0",
+  "description": "display audio stuff with p5",
+  "main": "sketch.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "auunion",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^2.18.13"
+  }
+}
