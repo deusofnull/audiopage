@@ -9,6 +9,7 @@
   "author": "auunion",
   "license": "ISC",
   "dependencies": {
-    "browser-sync": "^2.18.13"
+    "browser-sync": "^2.18.13",
+    "smoothie": "^1.33.0"
   }
 }

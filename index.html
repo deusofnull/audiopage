@@ -7,6 +7,9 @@
     <script src="./p5.dom.min.js"></script>
     <script src="./p5.sound.min.js"></script>
     <script src="sketch.js"></script>
+    <script type="text/javascript" src="./smoothie.js"></script>
+
+
 
     <style>
       .container {
@@ -50,5 +53,25 @@
   </head>
   <body>
     <div id='container' class='container'></div>
+
+    <canvas id="chart" width="400" height="100"></canvas>
+    <script>
+
+    // Create a time series
+    var series = new TimeSeries();
+
+    // Find the canvas
+    var canvas = document.getElementById('chart');
+
+    // Create the chart
+    var chart = new SmoothieChart();
+    chart.addTimeSeries(series, { strokeStyle: 'rgba(0, 255, 0, 1)' });
+    chart.streamTo(canvas, 500);
+
+    // Randomly add a data point every 500ms
+    setInterval(function() {
+        series.append(Date.now(), Math.random() * 10000);
+    }, 500);
+    </script>
   </body>
 </html>
